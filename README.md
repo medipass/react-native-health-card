@@ -1,4 +1,4 @@
-# React Native Health Card
+# React Native Health Card 🏥💳
 
 React Native Health Card is a module that displays a look-a-like health fund card on your react native view!
 
