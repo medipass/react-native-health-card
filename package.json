@@ -1,0 +1,15 @@
+{
+  "name": "react-native-health-card",
+  "version": "0.0.0",
+  "description": "React native health card display component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jake Moxey",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "4.16.2",
+    "react-native-flip-card": "3.3.1"
+  }
+}
