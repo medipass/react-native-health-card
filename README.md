@@ -23,7 +23,12 @@ Inspiration from [@sonnylazuardi](https://github.com/sonnylazuardi/react-native-
   memberNumberLength | string | `8` | The member number length.
   rank | string | N/A | The card rank.
   rankLength | string | `2` | The card rank length.
+	showBack | bool | `false` | Shows the back of the card.
+	showIssueDate | bool | `true` | Shows the card issue date.
+	showIssueNumber | bool | `true` | Shows the issue number.
+	showMembershipNumber | bool | `true` | Shows the membership number.
   showSwipeBar | bool | `true` | Whether or not to show the black swipe bar on the back of the card.
+	showRank | bool | `true` | Shows the rank.
   type | string | `generic` | Type of health fund card. Available options: `generic`. (More coming soon)
   width | number | `300` | The width of the card.
 
@@ -40,6 +45,7 @@ import HealthCard from `react-native-health-card`;
   issueDate="01/01/2015"
   rank="01"
   issueNumber="02"
+	showRank={false}
 />
 ...
 ```

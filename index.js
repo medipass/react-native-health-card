@@ -20,6 +20,11 @@ export const HealthCard = ({
   rank,
   rankLength,
   style,
+  showBack,
+  showIssueDate,
+  showIssueNumber,
+  showMembershipNumber,
+  showRank,
   showSwipeBar,
   type,
 }) => {
@@ -38,6 +43,11 @@ export const HealthCard = ({
           issueNumber: padNumber(issueNumber, issueNumberLength),
           memberNumber: padNumber(memberNumber, memberNumberLength),
           rank: padNumber(rank, rankLength),
+          showBack,
+          showIssueDate,
+          showIssueNumber,
+          showMembershipNumber,
+          showRank,
           showSwipeBar,
         })
       }
@@ -57,6 +67,11 @@ HealthCard.propTypes = {
   rank: PropTypes.string,
   rankLength: PropTypes.number,
   style: PropTypes.object,
+  showBack: PropTypes.bool,
+  showIssueNumber: PropTypes.bool,
+  showIssueDate: PropTypes.bool,
+  showMembershipNumber: PropTypes.bool,
+  showRank: PropTypes.bool,
   showSwipeBar: PropTypes.bool,
   type: PropTypes.string,
   width: PropTypes.number,
@@ -71,6 +86,11 @@ HealthCard.defaultProps = {
   issueDateFormat: 'dd/mm/yyyy',
   rankLength: 2,
   issueNumberLength: 2,
+  showBack: true,
+  showMembershipNumber: true,
+  showIssueNumber: true,
+  showIssueDate: true,
+  showRank: true,
 };
 
 export default HealthCard;

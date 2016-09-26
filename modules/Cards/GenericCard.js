@@ -14,16 +14,23 @@ export const GenericCard = ({
   width,
   height,
   issueDate,
+  issueNumber,
   memberNumber,
   rank,
+  showBack,
+  showMembershipNumber,
+  showIssueDate,
+  showRank,
+  showIssueNumber,
   showSwipeBar,
 }) => (
   <FlipCard
     style={cardStyle}
     friction={6}
     perspective={1000}
-    flipHorizontal
     flipVertical={false}
+    flip={showBack}
+    flipHorizontal
     clickable
   >
     <View style={[commonStyles.front, { width, height }]}>
@@ -33,30 +40,48 @@ export const GenericCard = ({
       </View>
       <View style={[genericCardStyles.row, { marginTop: 70 }]}>
         <View>
-          <Text style={[genericCardStyles.text, genericCardStyles.title]}>MEMBERSHIP NO</Text>
-          <Text style={[genericCardStyles.text]}>{memberNumber}</Text>
+          {
+            showMembershipNumber &&
+              <View>
+                <Text style={[genericCardStyles.text, genericCardStyles.title]}>MEMBERSHIP NO</Text>
+                <Text style={[genericCardStyles.text]}>{memberNumber}</Text>
+              </View>
+          }
         </View>
         <View>
-          <Text style={[genericCardStyles.text, genericCardStyles.title, { textAlign: 'right' }]}>ISSUE DATE</Text>
-          <Text style={[genericCardStyles.text, { textAlign: 'right' }]}>{issueDate}</Text>
+          {
+            showIssueDate &&
+              <View>
+                <Text style={[genericCardStyles.text, genericCardStyles.title, { textAlign: 'right' }]}>
+                  ISSUE DATE
+                </Text>
+                <Text style={[genericCardStyles.text, { textAlign: 'right' }]}>{issueDate}</Text>
+              </View>
+          }
         </View>
       </View>
     </View>
     <View style={[commonStyles.back, { width, height }]}>
       {showSwipeBar && <View style={commonStyles.bar} />}
       <View style={[genericCardStyles.row, { top: 60, justifyContent: 'flex-end' }]}>
-        <View>
-          <Text style={[genericCardStyles.text, genericCardStyles.title]}>RANK</Text>
-          <Text style={[genericCardStyles.text, { textAlign: 'right' }]}>{rank}</Text>
-        </View>
+        {
+          showRank &&
+            <View>
+              <Text style={[genericCardStyles.text, genericCardStyles.title]}>RANK</Text>
+              <Text style={[genericCardStyles.text, { textAlign: 'right' }]}>{rank}</Text>
+            </View>
+        }
       </View>
       <View style={[genericCardStyles.row]}>
-        <View style={[genericCardStyles.column, { justifyContent: 'flex-end' }]}>
-          <Text style={[genericCardStyles.text, genericCardStyles.title, { textAlign: 'right' }]}>
-            ISSUE NUMBER
-          </Text>
-          <Text style={[genericCardStyles.text, { textAlign: 'right' }]}>02</Text>
-        </View>
+        {
+          showIssueNumber &&
+            <View style={[genericCardStyles.column, { justifyContent: 'flex-end' }]}>
+              <Text style={[genericCardStyles.text, genericCardStyles.title, { textAlign: 'right' }]}>
+                ISSUE NUMBER
+              </Text>
+              <Text style={[genericCardStyles.text, { textAlign: 'right' }]}>{issueNumber}</Text>
+            </View>
+        }
       </View>
     </View>
   </FlipCard>
@@ -68,8 +93,14 @@ GenericCard.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   issueDate: PropTypes.string,
+  issueNumber: PropTypes.string,
   memberNumber: PropTypes.string,
   rank: PropTypes.string,
+  showMembershipNumber: PropTypes.bool,
+  showIssueDate: PropTypes.bool,
+  showRank: PropTypes.bool,
+  showIssueNumber: PropTypes.bool,
+  showBack: PropTypes.bool,
 };
 
 export default GenericCard;
