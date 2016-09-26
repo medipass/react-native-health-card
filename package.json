@@ -1,6 +1,6 @@
 {
   "name": "react-native-health-card",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React native health card display component",
   "main": "index.js",
   "scripts": {
