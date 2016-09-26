@@ -46,9 +46,8 @@ export const HealthCard = ({
 };
 
 HealthCard.propTypes = {
-  width: PropTypes.number,
-  height: PropTypes.number,
   bgColor: PropTypes.string,
+  height: PropTypes.number,
   issueDate: PropTypes.string,
   issueDateFormat: PropTypes.string,
   issueNumber: PropTypes.string,
@@ -60,6 +59,7 @@ HealthCard.propTypes = {
   style: PropTypes.object,
   showSwipeBar: PropTypes.bool,
   type: PropTypes.string,
+  width: PropTypes.number,
 };
 
 HealthCard.defaultProps = {
