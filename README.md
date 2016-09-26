@@ -16,7 +16,7 @@ Inspiration from [@sonnylazuardi](https://github.com/sonnylazuardi/react-native-
 	Property	|	Type		|	Default		|	Description
 :-----------------------|:--------------|:--------------|:--------------------------------
 	bgColor	|	string	|	`#419dff`	|	The background color of the health card of type `generic`.
-  height | number | 180 | The height of the card.
+  height | number | `180` | The height of the card.
 	issueDate	|	string | N/A | The card issue date. E.g. `12/12/2015`
 	issueDateFormat       |       string    |      `dd/mm/yyyy`        |  Format of the issue date in the format of `d`, `m`, and `y`.
   issueNumber | string | N/A | The issue number to display on the card.
@@ -47,7 +47,7 @@ import HealthCard from `react-native-health-card`;
   issueDate="01/01/2015"
   rank="01"
   issueNumber="02"
-	showRank={false}
+  showRank={false}
 />
 ...
 ```
