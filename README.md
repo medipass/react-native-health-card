@@ -37,7 +37,7 @@ Inspiration from [@sonnylazuardi](https://github.com/sonnylazuardi/react-native-
 ## Example
 
 ```javascript
-import HealthCard from `react-native-health-card`;
+import HealthCard from 'react-native-health-card';
 
 ...
 <HealthCard
