@@ -2,6 +2,8 @@
 
 React Native Health Card is a module that displays a look-a-like health fund card on your react native view!
 
+![rn-health-card](http://i.giphy.com/QdkvFqbEhbbm8.gif)
+
 Inspiration from [@sonnylazuardi](https://github.com/sonnylazuardi/react-native-credit-card) and [@jessepollak](https://github.com/jessepollak/card)
 
 ## Usage
