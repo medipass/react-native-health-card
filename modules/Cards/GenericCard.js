@@ -34,17 +34,17 @@ export const GenericCard = ({
     clickable
   >
     <View style={[commonStyles.front, { width, height }]}>
-      <View style={genericCardStyles.row}>
-        <Text style={[genericCardStyles.text, genericCardStyles.healthFundTitle]}>HEALTH FUND</Text>
+      <View style={commonStyles.row}>
+        <Text style={[commonStyles.text, genericCardStyles.healthFundTitle]}>HEALTH FUND</Text>
         <Image source={{ uri: logoUri }} style={genericCardStyles.logo} />
       </View>
-      <View style={[genericCardStyles.row, { marginTop: 70 }]}>
+      <View style={[commonStyles.row, { marginTop: 70 }]}>
         <View>
           {
             showMembershipNumber &&
               <View>
-                <Text style={[genericCardStyles.text, genericCardStyles.title]}>MEMBERSHIP NO</Text>
-                <Text style={[genericCardStyles.text]}>{memberNumber}</Text>
+                <Text style={[commonStyles.text, commonStyles.title]}>MEMBERSHIP NO</Text>
+                <Text style={[commonStyles.text]}>{memberNumber}</Text>
               </View>
           }
         </View>
@@ -52,10 +52,10 @@ export const GenericCard = ({
           {
             showIssueDate &&
               <View>
-                <Text style={[genericCardStyles.text, genericCardStyles.title, { textAlign: 'right' }]}>
+                <Text style={[commonStyles.text, commonStyles.title, { textAlign: 'right' }]}>
                   ISSUE DATE
                 </Text>
-                <Text style={[genericCardStyles.text, { textAlign: 'right' }]}>{issueDate}</Text>
+                <Text style={[commonStyles.text, { textAlign: 'right' }]}>{issueDate}</Text>
               </View>
           }
         </View>
@@ -63,23 +63,23 @@ export const GenericCard = ({
     </View>
     <View style={[commonStyles.back, { width, height }]}>
       {showSwipeBar && <View style={commonStyles.bar} />}
-      <View style={[genericCardStyles.row, { top: 60, justifyContent: 'flex-end' }]}>
+      <View style={[commonStyles.row, { top: 60, justifyContent: 'flex-end' }]}>
         {
           showRank &&
             <View>
-              <Text style={[genericCardStyles.text, genericCardStyles.title]}>RANK</Text>
-              <Text style={[genericCardStyles.text, { textAlign: 'right' }]}>{rank}</Text>
+              <Text style={[commonStyles.text, commonStyles.title]}>RANK</Text>
+              <Text style={[commonStyles.text, { textAlign: 'right' }]}>{rank}</Text>
             </View>
         }
       </View>
-      <View style={[genericCardStyles.row]}>
+      <View style={[commonStyles.row]}>
         {
           showIssueNumber &&
-            <View style={[genericCardStyles.column, { justifyContent: 'flex-end' }]}>
-              <Text style={[genericCardStyles.text, genericCardStyles.title, { textAlign: 'right' }]}>
+            <View style={[commonStyles.column, { justifyContent: 'flex-end' }]}>
+              <Text style={[commonStyles.text, commonStyles.title, { textAlign: 'right' }]}>
                 ISSUE NUMBER
               </Text>
-              <Text style={[genericCardStyles.text, { textAlign: 'right' }]}>{issueNumber}</Text>
+              <Text style={[commonStyles.text, { textAlign: 'right' }]}>{issueNumber}</Text>
             </View>
         }
       </View>

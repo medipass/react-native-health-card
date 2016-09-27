@@ -35,4 +35,17 @@ export default StyleSheet.create({
     top: 30,
     backgroundColor: '#000',
   },
+  column: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+  row: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  title: {
+    fontSize: 10,
+  },
 });
