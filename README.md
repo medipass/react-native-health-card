@@ -18,6 +18,7 @@ Inspiration from [@sonnylazuardi](https://github.com/sonnylazuardi/react-native-
 	bgColor	|	string	|	`#419dff`	|	The background color of the health card of type `generic`.
 	cardHolderName | string | `John Smith` | Name of the card holder.
   height | number | `180` | The height of the card.
+	focus | string | `all` | The attribute to focus on. Available options: `all`, `memberNumber`, `issueNumber`, `rank`, `issueDate`.
 	issueDate	|	string | N/A | The card issue date. E.g. `12/12/2015`
 	issueDateFormat       |       string    |      `dd/mm/yyyy`        |  Format of the issue date in the format of `d`, `m`, and `y`.
   issueNumber | string | N/A | The issue number to display on the card.

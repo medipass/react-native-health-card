@@ -10,6 +10,9 @@ export default StyleSheet.create({
     borderColor: '#dcdcdc',
     borderWidth: 1,
   },
+  focus: {
+    color: 'black',
+  },
   logo: {
     width: 108,
     height: 78,
