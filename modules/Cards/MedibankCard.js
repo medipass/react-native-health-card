@@ -10,6 +10,7 @@ const logoUri = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAAgCAYAAADpN
 /*eslint-enable*/
 
 export const MedibankCard = ({
+  cardHolderName,
   cardStyle,
   width,
   height,
@@ -18,6 +19,7 @@ export const MedibankCard = ({
   memberNumber,
   rank,
   showBack,
+  showCardHolderName,
   showMembershipNumber,
   showIssueDate,
   showRank,
@@ -42,7 +44,12 @@ export const MedibankCard = ({
           showRank &&
             <View style={{ flex: 1, flexDirection: 'row' }}>
               <Text style={[commonStyles.text]}>{rank}</Text>
-              <Text style={[commonStyles.text, { marginLeft: 10, marginTop: 2, fontSize: 12 }]}>John Smith</Text>
+              {
+                showCardHolderName &&
+                  <Text style={[commonStyles.text, { marginLeft: 10, marginTop: 2, fontSize: 12 }]}>
+                    {cardHolderName}
+                  </Text>
+              }
             </View>
         }
       </View>
@@ -87,6 +94,7 @@ export const MedibankCard = ({
 );
 
 MedibankCard.propTypes = {
+  cardHolderName: PropTypes.string,
   cardStyle: PropTypes.array,
   showSwipeBar: PropTypes.bool,
   width: PropTypes.string,
@@ -95,6 +103,7 @@ MedibankCard.propTypes = {
   issueNumber: PropTypes.string,
   memberNumber: PropTypes.string,
   rank: PropTypes.string,
+  showCardHolderName: PropTypes.bool,
   showMembershipNumber: PropTypes.bool,
   showIssueDate: PropTypes.bool,
   showRank: PropTypes.bool,

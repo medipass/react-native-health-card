@@ -10,6 +10,7 @@ const logoUri = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAABOCAYAAADFA
 /*eslint-enable*/
 
 export const AHMCard = ({
+  cardHolderName,
   cardStyle,
   width,
   height,
@@ -18,6 +19,7 @@ export const AHMCard = ({
   memberNumber,
   rank,
   showBack,
+  showCardHolderName,
   showMembershipNumber,
   showIssueDate,
   showRank,
@@ -58,7 +60,12 @@ export const AHMCard = ({
           showRank &&
             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-end' }}>
               <Text style={[ahmCardStyles.textBlack]}>{rank}</Text>
-              <Text style={[ahmCardStyles.textBlack, { fontSize: 12, marginTop: 2, marginLeft: 5 }]}>John Smith</Text>
+              {
+                showCardHolderName &&
+                  <Text style={[ahmCardStyles.textBlack, { fontSize: 12, marginTop: 2, marginLeft: 5 }]}>
+                    {cardHolderName}
+                  </Text>
+              }
             </View>
         }
       </View>
@@ -70,7 +77,10 @@ export const AHMCard = ({
                 Member No.
               </Text>
               <Text style={[ahmCardStyles.textBlack]}>{memberNumber}</Text>
-              <Text style={[ahmCardStyles.textBlack, { fontWeight: 'bold' }]}>John</Text>
+              {
+                showCardHolderName &&
+                  <Text style={[ahmCardStyles.textBlack, { fontWeight: 'bold' }]}>{cardHolderName.split(' ')[0]}</Text>
+              }
             </View>
         }
         {
@@ -85,6 +95,7 @@ export const AHMCard = ({
 );
 
 AHMCard.propTypes = {
+  cardHolderName: PropTypes.string,
   cardStyle: PropTypes.array,
   showSwipeBar: PropTypes.bool,
   width: PropTypes.string,
@@ -93,6 +104,7 @@ AHMCard.propTypes = {
   issueNumber: PropTypes.string,
   memberNumber: PropTypes.string,
   rank: PropTypes.string,
+  showCardHolderName: PropTypes.bool,
   showMembershipNumber: PropTypes.bool,
   showIssueDate: PropTypes.bool,
   showRank: PropTypes.bool,

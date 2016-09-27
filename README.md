@@ -16,6 +16,7 @@ Inspiration from [@sonnylazuardi](https://github.com/sonnylazuardi/react-native-
 	Property	|	Type		|	Default		|	Description
 :-----------------------|:--------------|:--------------|:--------------------------------
 	bgColor	|	string	|	`#419dff`	|	The background color of the health card of type `generic`.
+	cardHolderName | string | `John Smith` | Name of the card holder.
   height | number | `180` | The height of the card.
 	issueDate	|	string | N/A | The card issue date. E.g. `12/12/2015`
 	issueDateFormat       |       string    |      `dd/mm/yyyy`        |  Format of the issue date in the format of `d`, `m`, and `y`.
@@ -26,6 +27,7 @@ Inspiration from [@sonnylazuardi](https://github.com/sonnylazuardi/react-native-
   rank | string | N/A | The card rank.
   rankLength | string | `2` | The card rank length.
 	showBack | bool | `false` | Shows the back of the card.
+	showCardHolderName | bool | `true` | Shows the name of the card holder.
 	showIssueDate | bool | `true` | Shows the card issue date.
 	showIssueNumber | bool | `true` | Shows the issue number.
 	showMembershipNumber | bool | `true` | Shows the membership number.

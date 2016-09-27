@@ -10,6 +10,7 @@ const logoUri = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAFACAYAAADNk
 /*eslint-enable*/
 
 export const GenericCard = ({
+  cardHolderName,
   cardStyle,
   width,
   height,
@@ -18,6 +19,7 @@ export const GenericCard = ({
   memberNumber,
   rank,
   showBack,
+  showCardHolderName,
   showMembershipNumber,
   showIssueDate,
   showRank,
@@ -38,7 +40,13 @@ export const GenericCard = ({
         <Text style={[commonStyles.text, genericCardStyles.healthFundTitle]}>HEALTH FUND</Text>
         <Image source={{ uri: logoUri }} style={genericCardStyles.logo} />
       </View>
-      <View style={[commonStyles.row, { marginTop: 70 }]}>
+      <View style={[commonStyles.row, { top: 20 }]}>
+        {
+          showCardHolderName &&
+            <Text style={[commonStyles.text]}>{cardHolderName}</Text>
+        }
+      </View>
+      <View style={[commonStyles.row, { marginTop: 20 }]}>
         <View>
           {
             showMembershipNumber &&
@@ -88,6 +96,7 @@ export const GenericCard = ({
 );
 
 GenericCard.propTypes = {
+  cardHolderName: PropTypes.string,
   cardStyle: PropTypes.array,
   showSwipeBar: PropTypes.bool,
   width: PropTypes.string,
@@ -96,6 +105,7 @@ GenericCard.propTypes = {
   issueNumber: PropTypes.string,
   memberNumber: PropTypes.string,
   rank: PropTypes.string,
+  showCardHolderName: PropTypes.bool,
   showMembershipNumber: PropTypes.bool,
   showIssueDate: PropTypes.bool,
   showRank: PropTypes.bool,

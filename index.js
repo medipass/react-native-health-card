@@ -11,6 +11,7 @@ export const HealthCard = ({
   width,
   height,
   bgColor,
+  cardHolderName,
   issueDate,
   issueDateFormat,
   issueNumber,
@@ -21,6 +22,7 @@ export const HealthCard = ({
   rankLength,
   style,
   showBack,
+  showCardHolderName,
   showIssueDate,
   showIssueNumber,
   showMembershipNumber,
@@ -38,12 +40,14 @@ export const HealthCard = ({
     <View>
       {
         createElement(cardComponent, {
+          cardHolderName,
           cardStyle,
           issueDate: parseIssueDate(issueDate, issueDateFormat),
           issueNumber: padNumber(issueNumber, issueNumberLength),
           memberNumber: padNumber(memberNumber, memberNumberLength),
           rank: padNumber(rank, rankLength),
           showBack,
+          showCardHolderName,
           showIssueDate,
           showIssueNumber,
           showMembershipNumber,
@@ -58,6 +62,7 @@ export const HealthCard = ({
 HealthCard.propTypes = {
   bgColor: PropTypes.string,
   height: PropTypes.number,
+  cardHolderName: PropTypes.string,
   issueDate: PropTypes.string,
   issueDateFormat: PropTypes.string,
   issueNumber: PropTypes.string,
@@ -68,6 +73,7 @@ HealthCard.propTypes = {
   rankLength: PropTypes.number,
   style: PropTypes.object,
   showBack: PropTypes.bool,
+  showCardHolderName: PropTypes.bool,
   showIssueNumber: PropTypes.bool,
   showIssueDate: PropTypes.bool,
   showMembershipNumber: PropTypes.bool,
@@ -79,6 +85,7 @@ HealthCard.propTypes = {
 
 HealthCard.defaultProps = {
   bgColor: '#419dff',
+  cardHolderName: 'John Smith',
   height: 180,
   type: 'generic',
   width: 300,
@@ -87,6 +94,7 @@ HealthCard.defaultProps = {
   rankLength: 2,
   issueNumberLength: 2,
   showBack: true,
+  showCardHolderName: true,
   showMembershipNumber: true,
   showIssueNumber: true,
   showIssueDate: true,
