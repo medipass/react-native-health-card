@@ -45,12 +45,14 @@ import HealthCard from 'react-native-health-card';
 ...
 <HealthCard
   showSwipeBar
+  focus="memberNumber"
   memberNumber="123456789"
   memberNumberLength={10}
   issueDate="01/01/2015"
   rank="01"
   issueNumber="02"
   showRank={false}
+  type="medibank"
 />
 ...
 ```
