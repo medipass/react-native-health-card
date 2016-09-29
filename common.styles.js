@@ -1,6 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+  bgImage: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    borderRadius: 8,
+  },
   container: {
     borderRadius: 8,
     borderWidth: 0,
@@ -44,6 +52,10 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  rowNoSpaceBetween: {
+    flex: 1,
+    flexDirection: 'row',
   },
   title: {
     fontSize: 10,
