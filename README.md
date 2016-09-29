@@ -1,5 +1,7 @@
 # React Native Health Card 🏥💳
 
+[![npm badge](https://nodei.co/npm/react-native-health-card.png?downloads=true&stars=true)](https://npmjs.org/package/react-native-health-card)
+
 React Native Health Card is a module that displays a look-a-like health fund card on your react native view!
 
 ![rn-health-card](http://i.giphy.com/QdkvFqbEhbbm8.gif)
