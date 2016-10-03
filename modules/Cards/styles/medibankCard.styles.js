@@ -5,7 +5,7 @@ export default StyleSheet.create({
     backgroundColor: '#a80002',
   },
   logo: {
-    width: 98,
+    width: 103,
     height: 32,
   },
   healthFundTitle: {
