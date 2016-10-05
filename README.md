@@ -41,6 +41,14 @@ Inspiration from [@sonnylazuardi](https://github.com/sonnylazuardi/react-native-
 
 ## Example
 
+To run the example in the `example/` folder:
+
+- Ensure you have `react-native` installed globally.
+
+1. `cd example/`
+2. `npm install`
+3. `react-native run-ios`
+
 ```javascript
 import HealthCard from 'react-native-health-card';
 
