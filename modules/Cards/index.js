@@ -5,15 +5,10 @@ import MedibankCard from './MedibankCard';
 
 export const getCardComponent = (type) => {
   switch (type) {
-    case 'ahm':
-      return AHMCard;
-    case 'generic':
-      return GenericCard;
-    case 'hcf':
-      return HCFCard;
-    case 'medibank':
-      return MedibankCard;
-    default:
-      return GenericCard;
+    case 'ahm': return AHMCard;
+    case 'generic': return GenericCard;
+    case 'hcf': return HCFCard;
+    case 'mbp': return MedibankCard;
+    default: return GenericCard;
   }
 };
