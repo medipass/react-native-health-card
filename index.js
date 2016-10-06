@@ -97,7 +97,7 @@ HealthCard.defaultProps = {
   issueDateFormat: 'dd/mm/yyyy',
   rankLength: 2,
   issueNumberLength: 2,
-  showBack: true,
+  showBack: false,
   showCardHolderName: true,
   showMembershipNumber: true,
   showIssueNumber: true,

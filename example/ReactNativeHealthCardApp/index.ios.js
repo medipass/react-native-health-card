@@ -42,7 +42,6 @@ class ReactNativeHealthCardApp extends Component {
           issueDate={this.state.issueDate}
           rank={this.state.rank}
           issueNumber={this.state.issueNumber}
-          showBack={this.state.showBack}
           issueDateFormat="dd/mm/yy"
           focus={this.state.focus}
           type="generic"
