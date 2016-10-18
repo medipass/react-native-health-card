@@ -7,7 +7,7 @@ import MedibankCard from './MedibankCard';
 export const getCardComponent = (type) => {
   switch (type) {
     case 'ahm': return AHMCard;
-    case 'bupa': return BupaCard;
+    case 'bup': return BupaCard;
     case 'generic': return GenericCard;
     case 'hcf': return HCFCard;
     case 'mbp': return MedibankCard;
