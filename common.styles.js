@@ -12,7 +12,7 @@ export default StyleSheet.create({
   container: {
     borderRadius: 8,
     borderWidth: 0,
-    flex: 1,
+    flex: 0,
   },
   logo: {
     height: 35,
