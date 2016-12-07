@@ -39,7 +39,7 @@ Inspiration from [@sonnylazuardi](https://github.com/sonnylazuardi/react-native-
 	showMembershipNumber | bool | `true` | Shows the membership number.
   showSwipeBar | bool | `true` | Whether or not to show the black swipe bar on the back of the card.
 	showRank | bool | `true` | Shows the rank.
-  type | string | `generic` | Type of health fund card. Available options: `generic`, `ahm`, `mbp`, `hcf`. (More coming soon)
+  type | string | `generic` | Type of health fund card. Available options: `generic`, `ahm`, `bupa`, `mbp`, `hcf`. (More coming soon)
   width | number | `300` | The width of the card.
 
 ## Example
