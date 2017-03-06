@@ -7,11 +7,11 @@ import bupaCardStyles from './styles/bupaCard.styles';
 import cardImages from './card.images';
 import { getFocusStyle } from '../../utils/textFocus';
 
-const backAttributes = ['cardNumber'];
+const backAttributes = ['issueNumber'];
 
-export const MedibankCard = ({
+export const BupaCard = ({
   cardHolderName,
-  cardNumber,
+  issueNumber,
   cardStyle,
   width,
   height,
@@ -20,46 +20,46 @@ export const MedibankCard = ({
   rank,
   showBack,
   showCardHolderName,
-  showCardNumber,
+  showIssueNumber,
   showMembershipNumber,
   showRank,
   showSwipeBar,
 }) => (
-  <FlipCard
-    style={[cardStyle, bupaCardStyles.bupaBackgroundColor]}
-    friction={6}
-    perspective={1000}
-    flipVertical={false}
-    flip={showBack || backAttributes.includes(focus)}
-    flipHorizontal
-    clickable
-  >
-    <View style={[commonStyles.front, { width, height, flexDirection: 'column', justifyContent: 'space-between' }]}>
-      <View style={[commonStyles.row, { justifyContent: 'flex-end' }]}>
-        {
-          showRank &&
+    <FlipCard
+      style={[cardStyle, bupaCardStyles.bupaBackgroundColor]}
+      friction={6}
+      perspective={1000}
+      flipVertical={false}
+      flip={showBack || backAttributes.includes(focus)}
+      flipHorizontal
+      clickable
+    >
+      <View style={[commonStyles.front, { width, height, flexDirection: 'column', justifyContent: 'space-between' }]}>
+        <View style={[commonStyles.row, { justifyContent: 'flex-end' }]}>
+          {
+            showRank &&
             <View style={{ flex: 1, flexDirection: 'row', marginTop: 20 }}>
               <Text style={[getFocusStyle(focus, 'rank', '#828282')]}>{rank}</Text>
               {
                 showCardHolderName &&
-                  <Text
-                    style={[getFocusStyle(focus, 'cardHolderName', '#828282'), {
-                      marginLeft: 10,
-                      marginTop: 2,
-                      fontSize: 12,
-                    }]}
-                  >
-                    {cardHolderName}
-                  </Text>
+                <Text
+                  style={[getFocusStyle(focus, 'cardHolderName', '#828282'), {
+                    marginLeft: 10,
+                    marginTop: 2,
+                    fontSize: 12,
+                  }]}
+                >
+                  {cardHolderName}
+                </Text>
               }
             </View>
-        }
-        <Image source={{ uri: cardImages.bupa.logoUri }} style={bupaCardStyles.logo} />
-      </View>
-      <View style={[commonStyles.row]}>
-        <View style={{ flexDirection: 'column', justifyContent: 'flex-end' }}>
-          {
-            showMembershipNumber &&
+          }
+          <Image source={{ uri: cardImages.bupa.logoUri }} style={bupaCardStyles.logo} />
+        </View>
+        <View style={[commonStyles.row]}>
+          <View style={{ flexDirection: 'column', justifyContent: 'flex-end' }}>
+            {
+              showMembershipNumber &&
               <View>
                 <Text
                   style={[commonStyles.title, getFocusStyle(focus, 'memberNumber', '#828282')]}
@@ -70,32 +70,32 @@ export const MedibankCard = ({
                   {memberNumber}
                 </Text>
               </View>
-          }
+            }
+          </View>
         </View>
       </View>
-    </View>
-    <View style={[commonStyles.back, bupaCardStyles.cardBack, { width, height, padding: 8 }]}>
-      <View style={[commonStyles.row]}>
-        {
-          showCardNumber &&
+      <View style={[commonStyles.back, bupaCardStyles.cardBack, { width, height, padding: 8 }]}>
+        <View style={[commonStyles.row]}>
+          {
+            showIssueNumber &&
             <View>
               <Text
-                style={[commonStyles.title, getFocusStyle(focus, 'cardNumber', '#828282'), {
+                style={[commonStyles.title, getFocusStyle(focus, 'issueNumber', '#828282'), {
                   textAlign: 'right',
                 }]}
               >
-                Card No: {cardNumber}
+                Card No: {issueNumber}
               </Text>
             </View>
-        }
+          }
+        </View>
+        {showSwipeBar && <View style={[commonStyles.bar, { backgroundColor: '#84cbff' }]} />}
       </View>
-      {showSwipeBar && <View style={[commonStyles.bar, { backgroundColor: '#84cbff' }]} />}
-    </View>
-  </FlipCard>
-);
+    </FlipCard>
+  );
 
-MedibankCard.propTypes = {
-  cardNumber: PropTypes.string,
+BupaCard.propTypes = {
+  issueNumber: PropTypes.string,
   cardHolderName: PropTypes.string,
   cardStyle: PropTypes.array,
   showSwipeBar: PropTypes.bool,
@@ -105,10 +105,10 @@ MedibankCard.propTypes = {
   memberNumber: PropTypes.string,
   rank: PropTypes.string,
   showCardHolderName: PropTypes.bool,
-  showCardNumber: PropTypes.bool,
+  showIssueNumber: PropTypes.bool,
   showMembershipNumber: PropTypes.bool,
   showRank: PropTypes.bool,
   showBack: PropTypes.bool,
 };
 
-export default MedibankCard;
+export default BupaCard;
