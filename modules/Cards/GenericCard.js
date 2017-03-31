@@ -13,15 +13,20 @@ const logoUri = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAFACAYAAADNk
 const backAttributes = ['rank', 'issueNumber'];
 
 export const GenericCard = ({
+  title,
   cardHolderName,
   cardStyle,
   width,
   height,
   focus,
   issueDate,
+  issueDateText,
   issueNumber,
+  issueNumberText,
   memberNumber,
+  memberNumberText,
   rank,
+  rankText,
   showBack,
   showCardHolderName,
   showMembershipNumber,
@@ -41,7 +46,7 @@ export const GenericCard = ({
   >
     <View style={[commonStyles.front, { width, height }]}>
       <View style={commonStyles.row}>
-        <Text style={[commonStyles.text, genericCardStyles.healthFundTitle]}>HEALTH FUND</Text>
+        <Text style={[commonStyles.text, genericCardStyles.healthFundTitle]}>{title}</Text>
         <Image source={{ uri: logoUri }} style={genericCardStyles.logo} />
       </View>
       <View style={[commonStyles.row, { top: 20 }]}>
@@ -56,7 +61,7 @@ export const GenericCard = ({
             showMembershipNumber &&
               <View>
                 <Text style={[commonStyles.text, commonStyles.title, getFocusStyle(focus, 'memberNumber')]}>
-                  MEMBERSHIP NO
+                  {memberNumberText}
                 </Text>
                 <Text style={[commonStyles.text, getFocusStyle(focus, 'memberNumber')]}>{memberNumber}</Text>
               </View>
@@ -74,7 +79,7 @@ export const GenericCard = ({
                     { textAlign: 'right' },
                   ]}
                 >
-                  ISSUE DATE
+                  {issueDateText}
                 </Text>
                 <Text style={[commonStyles.text, getFocusStyle(focus, 'issueDate'), { textAlign: 'right' }]}>
                   {issueDate}
@@ -90,7 +95,7 @@ export const GenericCard = ({
         {
           showRank &&
             <View>
-              <Text style={[commonStyles.text, commonStyles.title, getFocusStyle(focus, 'rank')]}>RANK</Text>
+              <Text style={[commonStyles.text, commonStyles.title, getFocusStyle(focus, 'rank')]}>{rankText}</Text>
               <Text style={[commonStyles.text, getFocusStyle(focus, 'rank'), { textAlign: 'right' }]}>{rank}</Text>
             </View>
         }
@@ -107,7 +112,7 @@ export const GenericCard = ({
                   { textAlign: 'right' },
                 ]}
               >
-                ISSUE NUMBER
+                {issueNumberText}
               </Text>
               <Text style={[commonStyles.text, getFocusStyle(focus, 'issueNumber'), { textAlign: 'right' }]}>
                 {issueNumber}
@@ -120,6 +125,7 @@ export const GenericCard = ({
 );
 
 GenericCard.propTypes = {
+  title: PropTypes.string,
   cardHolderName: PropTypes.string,
   cardStyle: PropTypes.array,
   showSwipeBar: PropTypes.bool,
@@ -127,15 +133,23 @@ GenericCard.propTypes = {
   height: PropTypes.string,
   focus: PropTypes.string,
   issueDate: PropTypes.string,
+  issueDateText: PropTypes.string,
   issueNumber: PropTypes.string,
+  issueNumberText: PropTypes.string,
   memberNumber: PropTypes.string,
+  memberNumberText: PropTypes.string,
   rank: PropTypes.string,
+  rankText: PropTypes.string,
   showCardHolderName: PropTypes.bool,
   showMembershipNumber: PropTypes.bool,
   showIssueDate: PropTypes.bool,
   showRank: PropTypes.bool,
   showIssueNumber: PropTypes.bool,
   showBack: PropTypes.bool,
+};
+
+GenericCard.defaultProps = {
+  title: 'HEALTH FUND',
 };
 
 export default GenericCard;
