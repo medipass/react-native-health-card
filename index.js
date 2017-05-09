@@ -12,6 +12,8 @@ export const HealthCard = ({
   height,
   bgColor,
   title,
+  logo,
+  logoStyle,
   cardHolderName,
   cardNumber,
   cardNumberLength,
@@ -50,6 +52,8 @@ export const HealthCard = ({
       {
         createElement(cardComponent, {
           title,
+          logo,
+          logoStyle,
           cardHolderName,
           cardStyle,
           focus,
@@ -78,6 +82,8 @@ export const HealthCard = ({
 
 HealthCard.propTypes = {
   title: PropTypes.string,
+  logo: PropTypes.string,
+  logoStyle: PropTypes.object,
   bgColor: PropTypes.string,
   height: PropTypes.number,
   cardHolderName: PropTypes.string,
@@ -110,6 +116,7 @@ HealthCard.propTypes = {
 };
 
 HealthCard.defaultProps = {
+  logoStyle: {},
   bgColor: '#419dff',
   cardHolderName: 'John Smith',
   cardNumberLength: 8,
