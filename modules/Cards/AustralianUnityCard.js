@@ -14,7 +14,7 @@ const bgUri = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAB+CAYAAABhy17
 const backAttributes = ['rank', 'issueNumber', 'memberNumber', 'cardHolderName'];
 
 export const AustUnityCard = ({
-  cardHolderName,
+    cardHolderName,
     cardStyle,
     width,
     height,
@@ -146,8 +146,8 @@ AustUnityCard.propTypes = {
     cardHolderName: PropTypes.string,
     cardStyle: PropTypes.array,
     showSwipeBar: PropTypes.bool,
-    width: PropTypes.string,
-    height: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
     focus: PropTypes.string,
     issueDate: PropTypes.string,
     issueNumber: PropTypes.string,
