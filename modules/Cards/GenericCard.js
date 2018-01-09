@@ -23,6 +23,7 @@ export const GenericCard = (props) => {
     if (props.issueNumberPosition === 'back') {
         backAttributes.push('issueNumber');
     }
+    const logo = props.logo && props.logo.length > 0 ? props.logo : defaultLogo;
     return (
         <FlipCard
             style={props.cardStyle}
@@ -34,9 +35,9 @@ export const GenericCard = (props) => {
             clickable
         >
             <View style={[commonStyles.front, { width: props.width, height: props.height }]}>
-                <View style={commonStyles.row}>
+                <View style={[commonStyles.row, { alignItems: 'flex-end'}]}>
                     <Text style={[commonStyles.text, genericCardStyles.healthFundTitle]}>{props.title}</Text>
-                    <Image source={{ uri: props.logo }} resizeMode={'contain'} style={[genericCardStyles.logo, props.logoStyle]} />
+                    <Image source={{ uri: logo }} resizeMode={'contain'} style={[genericCardStyles.logo, props.logoStyle]} />
                 </View>
                 {
                     props.memberNumberPosition === 'front' &&
