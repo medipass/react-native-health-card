@@ -85,6 +85,7 @@ export const AHMCard = ({
                       getFocusStyle(focus, 'rank'),
                       { fontSize: 12, marginTop: 2, marginLeft: 5 },
                     ]}
+                    numberOfLines={1}
                   >
                     {cardHolderName}
                   </Text>

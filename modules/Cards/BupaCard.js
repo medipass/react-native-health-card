@@ -49,6 +49,7 @@ export const BupaCard = ({
                     marginTop: 2,
                     fontSize: 12,
                   }]}
+                  numberOfLines={1}
                 >
                   {cardHolderName}
                 </Text>

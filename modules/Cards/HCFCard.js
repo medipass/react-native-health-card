@@ -44,7 +44,7 @@ export const HCFCard = ({
             <View style={[commonStyles.row, { marginTop: 10 }]}>
               {
                 showCardHolderName &&
-                  <Text style={[hcfCardStyles.text, getFocusStyle(focus, 'cardHolderName')]}>{cardHolderName}</Text>
+                  <Text style={[hcfCardStyles.text, getFocusStyle(focus, 'cardHolderName')]} numberOfLines={1}>{cardHolderName}</Text>
               }
             </View>
             <View style={[commonStyles.row]}>

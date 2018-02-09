@@ -6,8 +6,8 @@ export const PositionableField = (props) => {
     const currentFieldTextStyle = props.isHighlighted && props.fieldTextHighlightStyle ? props.fieldTextHighlightStyle : props.fieldTextStyle;
     return (
         <View style={props.fieldStyle}>
-            <Text style={currentFieldTextStyle}>{props.fieldText1}</Text>
-            <Text style={currentFieldTextStyle}>{props.fieldText2}</Text>
+            <Text style={currentFieldTextStyle} numberOfLines={1}>{props.fieldText1}</Text>
+            <Text style={currentFieldTextStyle} numberOfLines={1}>{props.fieldText2}</Text>
         </View>
     );
 }
