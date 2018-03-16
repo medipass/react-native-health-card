@@ -85,4 +85,4 @@ class ReactNativeHealthCardApp extends Component {
   }
 }
 
-AppRegistry.registerComponent('ReactNativeHealthCardApp', () => ReactNativeHealthCardApp);
+module.exports = ReactNativeHealthCardApp;
