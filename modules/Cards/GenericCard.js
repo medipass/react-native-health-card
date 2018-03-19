@@ -35,7 +35,7 @@ export const GenericCard = (props) => {
             clickable
         >
             <View style={[commonStyles.front, { width: props.width, height: props.height }]}>
-                <View style={[commonStyles.row, { alignItems: 'flex-end'}]}>
+                <View style={[commonStyles.row]}>
                     <Text style={[commonStyles.text, genericCardStyles.healthFundTitle]}>{props.title}</Text>
                     <Image source={{ uri: logo }} resizeMode={'contain'} style={[genericCardStyles.logo, props.logoStyle]} />
                 </View>
