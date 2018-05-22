@@ -26,7 +26,7 @@ export default StyleSheet.create({
   },
   front: {
     flex: 1,
-    padding: 20,
+    padding: 15,
   },
   back: {
     flex: 1,

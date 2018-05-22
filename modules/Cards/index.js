@@ -11,7 +11,6 @@ export const getCardComponent = (type) => {
     case 'ahm': return AHMCard;
     case 'bup': return BupaCard;
     case 'generic': return GenericCard;
-    case 'hcf': return HCFCard;
     case 'mbp': return MedibankCard;
     case 'auf': return AustralianUnityCard;
     case 'hea': return HealthDotComDotAuCard;
