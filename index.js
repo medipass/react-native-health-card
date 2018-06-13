@@ -26,7 +26,7 @@ export const HealthCard = (props) => {
     return (
         <View>
             {
-                createElement(cardComponent, {...elements})
+                createElement(cardComponent, { ...elements })
             }
         </View>
     );
@@ -76,6 +76,7 @@ HealthCard.propTypes = {
     showSwipeBar: PropTypes.bool,
     type: PropTypes.string,
     width: PropTypes.number,
+    applyBackgroundImage: PropTypes.bool,
 };
 
 HealthCard.defaultProps = {
@@ -114,6 +115,7 @@ HealthCard.defaultProps = {
     showIssueNumber: true,
     showIssueDate: true,
     showRank: true,
+    applyBackgroundImage: true,
 };
 
 export default HealthCard;
