@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/localz/react-native-health-card#readme",
   "dependencies": {
-    "lodash": "4.16.2",
+    "lodash": "4.17.15",
     "react-native-flip-card": "github:localz/react-native-flip-card",
     "prop-types": "^15.5.10"
   }
